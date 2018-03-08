@@ -20,10 +20,10 @@ public class Consumer implements Runnable{
 		{
 			ok++;
 			lock.lock();
-			int head=0;
 				try {
-				    head=Main.coada.remove();
-					System.out.println("Am eliminat elementul"+head);
+				 
+					Main.coada.remove();
+				    System.out.println("Am eliminat elementul");
 				} finally {lock.unlock();
 					
 				}
