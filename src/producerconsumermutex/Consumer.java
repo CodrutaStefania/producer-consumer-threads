@@ -13,17 +13,16 @@ public class Consumer implements Runnable{
 	@Override
 	public void run() {
 		int sizeOfQueue=Main.coada.size();
-		int ok=0;
-		while(ok<6)
+		boolean ok=true;
+		while(ok)
 		{
 		if(sizeOfQueue>0)
 		{
-			ok++;
 			lock.lock();
 				try {
 				 
 					Main.coada.remove();
-				    System.out.println("Am eliminat elementul");
+				    System.out.println("Am eliminat un element");
 				} finally {lock.unlock();
 					
 				}
